@@ -25,10 +25,12 @@ $base = 'https://pokeapi.co/api/v2/pokemon/'; ?>
         <?php
 for ($i = 1; $i < 152; ++$i) {
     $data = file_get_contents($base.$i.'/');
+
     $pokemon = json_decode($data);
     $name = $pokemon->name;
     $sprite = $pokemon->sprites->front_default;
-    $id = $pokemon->id; ?>
+    $id = $pokemon->id;
+    $types = $pokemon->types; ?>
 
 
         <div class="item">
@@ -37,8 +39,13 @@ for ($i = 1; $i < 152; ++$i) {
             <img src="<?php echo $sprite; ?>" class="img" alt="sprite-pokemon">
             <p class="id">#<?php echo $id; ?>
             </p>
-        </div>
+            <?php foreach ($types as $typelist) { ?>
 
+            <p class="type"><?php echo $typelist->type->name; ?>
+            </p>
+            <?php } ?>
+
+        </div>
 
         <?php
 }

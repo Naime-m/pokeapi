@@ -1,6 +1,6 @@
 * {
     cursor: url('cursor.cur'), auto;
-    background-color:azure;
+    background-color:lightblue;
  }
 
  .ctitle{
@@ -33,7 +33,7 @@
     flex-direction: row;
     margin: 5em 3em 3em 3em;
     padding: 2em;
-    border: 1em ridge grey;
+    border: 5px inset white;
     border-radius: 20%;
     box-shadow: 5px 5px lightblue, inset 0px 5px 5px lightblue;
 }
@@ -42,7 +42,7 @@
     background-color: #2a75bb;
     border-radius: 50%;
     padding: 1em;
-    width: 10em;
+    width: 13em;
     
 }
 
@@ -69,4 +69,12 @@
     font-size: 2em;
     font-weight: 600;
     color: #2a75bb;
+}
+
+.type{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    color: grey;
+    text-transform: capitalize;
 }
