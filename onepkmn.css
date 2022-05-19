@@ -7,7 +7,7 @@
 .title{
     text-align: center;
     display: block;
-    margin: 1em 2em 1em 2em;
+    margin : 1em 2em 1em 2em;
     color: #ffcb05 ;
     -webkit-text-stroke: 3px #2a75bb;
     font-size: 7em;
@@ -33,24 +33,21 @@
 
 .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .item{
     flex-direction: row;
-    margin: 1em;
-    padding: 2em;
-    border: 5px outset white;
+    margin: 2em;
+    padding: 1em 10em 10em 10em;
+    border: 5px inset white;
     border-radius: 20%;
     box-shadow: 5px 5px lightblue, inset 0px 5px 5px lightblue;
 }
 
 .img{
-    background-color: #2a75bb;
-    border-radius: 50%;
-    padding: 1em;
-    width: 13em;
+    width: 25em;
     
 }
 
@@ -68,9 +65,7 @@
     color:#2a75bb;
     text-align: center;
     text-transform: capitalize;
-    font-weight: 700;
-    padding: 10px;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .id{
@@ -80,7 +75,7 @@
     color: #2a75bb;
 }
 
-.type{
+.spec{
     text-align: center;
     font-size: 2em;
     font-weight: 500;

@@ -15,15 +15,17 @@
 
 $base = 'https://pokeapi.co/api/v2/pokemon/'; ?>
 
-    <div class="ctitle">
-        <h1 class="title">My Pokédex - POKEPHP</h1>
-        <h2 class="subtitle">KANTO EDITION</h2>
+    <div class="containertitle">
+        <a href="kanto.php" class="title">My Pokédex</a>
+        <a href="kanto.php" class="region">KANTO</a>
+        <a href="johto.php" class="region">JOHTO</a>
+        <a href="hoenn.php" class="region">HOENN</a>
     </div>
 
     <div class="container">
 
         <?php
-for ($i = 1; $i < 152; ++$i) {
+for ($i = 252; $i <387; ++$i) {
     $data = file_get_contents($base.$i.'/');
 
     $pokemon = json_decode($data);
@@ -33,12 +35,12 @@ for ($i = 1; $i < 152; ++$i) {
     $types = $pokemon->types; ?>
 
 
-        <div class="item">
-            <h1 class="pkmn-name"><?php echo $name; ?>
-            </h1>
-            <img src="<?php echo $sprite; ?>" class="img" alt="sprite-pokemon">
-            <p class="id">#<?php echo $id; ?>
+        <div class=" item">
+            <p class="pkmn-name">
+                <?php echo $name; ?>
             </p>
+            <a href="pkmn.php?id=<?php echo $pokemon->id; ?>" ><img src=" <?php echo $sprite; ?>" class="img" alt="sprite-pokemon"></a>
+            <p class="id">#<?php echo $id; ?></p>
             <?php foreach ($types as $typelist) { ?>
 
             <p class="type"><?php echo $typelist->type->name; ?>
@@ -55,4 +57,4 @@ for ($i = 1; $i < 152; ++$i) {
     </div>
 </body>
 
-</html>
+</html6
